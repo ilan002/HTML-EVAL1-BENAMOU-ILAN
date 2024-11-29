@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form>
+<fieldset><h1>Réservation de Voyage</h1>
+<fieldset>
+<legend><h2>Information du Client</h2></legend>
+<label for="Civilité">Civilité :</label>
+<select id="civilite" name="civilite" requierd>
+<option value="-choisissez-">-choisissez-</option>
+<option value="Madame">Madame</option>
+<option value="Monsieur">Monsieur</option>
+<option value="Autre">Autre</option>
+</select>
+<br>
+<br> 
+<div>
+<label for="Nom">Nom :</label>
+<input id="Nom" name="Nom" required minlength="2" maxlength="30" pattern="[A-Za-z]{3,25}">
+</div>
+<br> 
+<div>
+<label for="Prenom">Prénom :</label>
+<input id="Prenom" name="Prenom" required minlength="2" maxlength="30" pattern="[A-Za-z]{3,25}">
+</div>
+<br>
+<div>
+<label for="mail"> Email :</label>
+<input type="email" id="mail" name="user_mail" required>
+</div>
+<br>
+<div>
+<label for="tel">Téléphone:</label>
+<input id="tel" name="tel" required pattern="[0-9]{2}[ -][0-9]{2}[ -][0-9]{2}[ -][0-9]{2}">
+</div>
+<br>
+<label for="dateNaissance">Date de naissance :</label>
+<input type="date" id="dateNaissance" name="dateNaissance" required max="2006-11-29">
+</fieldset>
+<fieldset><legend><h2>Détails du Voyage</h2></legend>
+<label for="Destinations">Déstination :</label>
+<select id="Destinations" name="Destinations" requierd>
+<option value="Paris">Paris</option>
+<option value="Tokyo">Tokyo</option>
+<option value="New York">New York</option>
+</select>
+<br> 
+<br>
+<label for="Date de départ">Date de départ :</label>
+<input type="date" id="Date de départ" name="Date de départ" required min="2024-11-30">
+<br>
+<br>
+<label for="durée">Nombre de jours :</label>
+<input type="number" id="Durée" name="Durée">    
+<br>
+<br>
+<br>
+<label for="type">Type de voyage :</label>
+<br>
+<br>
+<input type="radio" name="Solo" value="Solo">Solo
+<input type="radio" name="Couple" value="Couple">Couple
+<input type="radio" name="Famille" value="Famille">Famille
+<br>
+<br>
+<input type="checkbox" name="assurance" value="assurance">Je souhaite souscrire une assurance voyage
+</fieldset>    
+<fieldset>
+<legend><h2>Validation</h2></legend>    
+<input type="checkbox" name="validation" value="Validation" required>J'accepte les conditions générales
+</fieldset>    
+<br>
+<button type="submit">Réserver</button>
+<button type="reset">Réinitialiser</button>  
+</fieldset>
+</form>
+</body> 
+</html>
